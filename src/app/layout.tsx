@@ -4,6 +4,7 @@ import { Inter as FontSans } from "next/font/google"
  
 
 import { cn } from "@/lib/utils"
+import Header from "./header";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <Header/>
         {children}
       </body>
     </html>
