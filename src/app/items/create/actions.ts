@@ -39,7 +39,7 @@ export async function createItemAction(formData:FormData) {
         throw new Error('Failed to get pre-signed URL.');
       }
     
-      const { url, fields } = await response.json();
+      const { url, fields ,fileKey} = await response.json();
     
       const formDataForUpload = new FormData();
       Object.entries(fields).forEach(([key, value]) => {
@@ -60,7 +60,7 @@ export async function createItemAction(formData:FormData) {
         name: formData.get("name") as string,
         startingPrice: priceAsCents,
         userId: user.id,
-        fileKey : file.name
+        fileKey : fileKey
       })
       redirect("/");
 }

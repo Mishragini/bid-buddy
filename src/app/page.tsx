@@ -22,11 +22,11 @@ const Home = async () => {
       <h1 className="text-4xl font-bold">Items for sale</h1>
       <div className="grid grid-cols-4 gap-8">
         {allItems.map((item, index) => (
-          <div key={item.id} className="border p-8 rounded-xl">
+          <div key={item.id} className="border p-8 rounded-xl space-y-2">
             <S3Image fileKey={item.fileKey}/>
-            {item.name}
-            <br />
-            starting price: ${item.startingPrice / 100}
+            <h2 className="text-xl font-bold">{item.name}</h2>
+            <p className="text-lg">starting price: ${item.startingPrice / 100}</p>
+            
           </div>
         ))}
       </div>

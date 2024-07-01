@@ -10,6 +10,8 @@ export async function GET(request :NextRequest): Promise<ResponseData> {
   const { searchParams } = new URL(request.url);
   const fileKey = searchParams.get('fileKey');
 
+  console.log("fileKey",fileKey);
+
   if (!fileKey) {
     return new NextResponse('fileKey query parameter is missing', { status: 400 });
   }
