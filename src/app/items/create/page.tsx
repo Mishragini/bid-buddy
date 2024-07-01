@@ -24,7 +24,11 @@ export default async function createPage(){
          step="0.01"
          placeholder="What to start your auction at"
          />
-
+         <Input
+         type="file"
+         name="file"
+         required
+         />
         <Button className="self-end" type="submit">Place Item</Button>
       </form>
       </main>
