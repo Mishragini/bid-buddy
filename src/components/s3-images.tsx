@@ -19,7 +19,7 @@ export default async function S3Image({fileKey}:{fileKey:string}) {
   return (
     <div>
       {imageUrl ? (
-        <img src={imageUrl} alt="s3url" width='1200' height='1200'/>
+        <img src={imageUrl} alt="s3url" width='400' height='400'/>
       ) : (
         <p>Loading image...</p>
       )}
