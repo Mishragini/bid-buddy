@@ -5,8 +5,8 @@ const getImage = async (fileKey:string) => {
     if (!response.ok) {
       throw new Error('Failed to fetch image');
     }
-    const data = await response.text()
-    return data
+    const data = await response.json()
+    return data.url
   } catch (error) {
     console.error('Error fetching image:', error);
   }
